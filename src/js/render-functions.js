@@ -5,7 +5,7 @@ export function renderPics(pictures) {
   const markup = pictures.hits
     .map(pic => {
       return `
-        <div class="photo-card">
+        <li class="photo-card">
           <a href="${pic.largeImageURL}">
             <img 
               src="${pic.webformatURL}" 
@@ -28,7 +28,7 @@ export function renderPics(pictures) {
               <b>Downloads</b> ${pic.downloads}
             </p>
           </div>
-        </div>
+        </li>
       `;
     })
     .join('');
