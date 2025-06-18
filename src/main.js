@@ -21,7 +21,10 @@ formEl.addEventListener('submit', async e => {
   e.preventDefault();
 
   const query = inputEl.value.trim();
-  if (!query) return;
+  if (!query) {
+    inputEl.value = '';
+    return;
+  }
   inputEl.value = '';
 
   galleryEl.innerHTML = '';
